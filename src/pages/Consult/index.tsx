@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
-import history from '../../services/history';
 import { Link } from 'react-router-dom';
 
 import mlb from '../../services/mlb';
 import Background from '../../components/Background';
-import { Container, BackButton, Content, AsideBox, SearchBox } from './styles';
+import { Container, Content, AsideBox, SearchBox } from './styles';
 
 interface Name {
   name: string
@@ -40,7 +39,7 @@ const Consult = () => {
     }
 
   }
-
+  console.log(categories)
   return (
     <Container>
       <Background />
