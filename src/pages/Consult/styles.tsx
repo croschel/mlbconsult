@@ -165,12 +165,14 @@ export const SearchBox = styled.div`
     width: 90%;
     height: 80%;
     left:5%;
+
   }
 
   @media ${device.mobileM} {
     width: 90%;
     height: 80%;
     left:5%;
+    
   }
   
   @media ${device.mobileS} {
@@ -236,7 +238,22 @@ export const SearchBox = styled.div`
       text-align: center;
       margin: 120px 0 90px 0;
       text-shadow: 1px 1px 15px rgba(0,0,0,0.75);
+      @media ${device.mobileL} {
+       font-size: 32px;
+       margin: 80px 0 80px 0;
+
+      }
+
+      @media ${device.mobileM} {
+        font-size: 32px;
+        margin: 80px 0 80px 0;
+        
+      }
       
+      @media ${device.mobileS} {
+        font-size: 32px;
+        margin: 80px 0 80px 0;
+      }
     }
     #category-id {
       font-size: 70px;
@@ -247,5 +264,24 @@ export const SearchBox = styled.div`
       border: none;
       border-radius: 55px;
       color: #fff;
+
+      @media ${device.mobileL} {
+       font-size: 35px;
+       margin: 30px auto;
+
+      }
+
+      @media ${device.mobileM} {
+        font-size: 35px;
+        margin: 30px auto;
+        
+      }
+      
+      @media ${device.mobileS} {
+        font-size: 35px;
+        margin: 30px auto;
+
+      }
+      
     }
 `;
