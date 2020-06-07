@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { device } from '../../styles/devices';
 
 interface ConsultProps {
   background: boolean
@@ -36,15 +37,12 @@ export const Container = styled.div`
   }
 `;
 
-export const BackButton = styled.button`
-  
-`;
-
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+
+
   table{
     border-spacing: 5px;
     display: flex;
@@ -79,7 +77,33 @@ export const AsideBox = styled.div`
   padding: 15px;
   box-shadow: 0px 0px 21px -2px #000000;
   width: 30%;
+
+  @media ${device.laptop} {
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    width: 45%;
+  }
+
+  @media ${device.tablet} {
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    width: 45%;
+  }
+
+  @media ${device.mobileL} {
+    display: none;
+  }
+
+  @media ${device.mobileM} {
+    display: none;
+  }
   
+  @media ${device.mobileS} {
+    display: none;
+  }
+
   &::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
@@ -123,6 +147,38 @@ export const SearchBox = styled.div`
   height: 70%;
   box-shadow: 0px 0px 21px -2px #000000;
 
+  @media ${device.laptop} {
+    height: 70%;
+    top: 15%;
+    right: 1%;
+    width: 45%;
+  }
+
+  @media ${device.tablet} {
+    height: 70%;
+    top: 15%;
+    right: 2%;
+    width: 48%;
+  }
+
+  @media ${device.mobileL} {
+    width: 90%;
+    height: 80%;
+    left:5%;
+  }
+
+  @media ${device.mobileM} {
+    width: 90%;
+    height: 80%;
+    left:5%;
+  }
+  
+  @media ${device.mobileS} {
+    width: 90%;
+    height: 80%;
+    left:5%;
+  }
+
   @keyframes ripple {
 	0%   { transform: translate(-100%, -100%); }
 	80%  { transform: translate(-100%, -100%) scale(50); }
@@ -134,7 +190,7 @@ export const SearchBox = styled.div`
   }
   input {
     margin: 0 ;
-    width: 80%;
+    width: 78%;
     height: 5%;
     border: none;
     border-radius: 8px;
@@ -150,7 +206,7 @@ export const SearchBox = styled.div`
   
     button {
       height: 5%;
-      width: 18%;
+      width: 20%;
       margin-left: 2%;
       border-radius: 10px;
       border: none;
@@ -186,7 +242,7 @@ export const SearchBox = styled.div`
       font-size: 70px;
       text-align: center;
       margin: 40px auto;
-      width: 70%;
+      width: 100%;
       padding: 10px;
       border: none;
       border-radius: 55px;
