@@ -1,12 +1,8 @@
+import styled from 'styled-components';
 
-#home-page {
-  height: 100vh;
-  background: url('../../assets/office.jpg') no-repeat;
-  background-size: cover;
-  opacity: 0.2;
-}
+export const Container = styled.div``;
 
-#content {
+export const Content = styled.div`
   position: absolute;
   top: 25%;
   left: 30%;
@@ -14,19 +10,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-#content h1 {
+  h1 {
   text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
   margin: 20px;
-}
-
-#content h2 {
+  }
+  
+  h2 {
   text-shadow: 4px 4px 10px rgba(0,0,0,0.75);
   margin: 20px 0 40px 0;
 }
 
-#content a{
+a{
   background: #08D79C;
   padding: 20px;
   border-radius: 16px;
@@ -42,7 +37,15 @@
   -webkit-box-shadow: 0px 0px 15px 4px #000000; 
   box-shadow: 1px 1px 15px 0px #000000;
 }
-#content span {
+span {
   margin-right: 10px;
 }
+`;
+
+
+
+
+
+
+
 
