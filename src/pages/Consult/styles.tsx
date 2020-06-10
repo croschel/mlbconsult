@@ -140,12 +140,37 @@ export const SearchBox = styled.div`
   border-radius: 16px;
   position: absolute;
   padding: 15px;
+  overflow-y: scroll;
   top: 15%;
   left: 50%;
   font-size: 24px;
   width: 30%;
   height: 70%;
   box-shadow: 0px 0px 21px -2px #000000;
+
+  &::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+  background-color: #F5F5F5;
+  box-shadow: 0px 0px 21px -2px #000000;
+}
+
+&::-webkit-scrollbar{
+	width: 12px;
+	background-color: #f1f1f1;
+}
+
+&::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #f1f1f1; 
+}
+
+&::-webkit-scrollbar-thumb:hover{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #dadada;
+}
 
   @media ${device.laptop} {
     height: 70%;
@@ -233,55 +258,81 @@ export const SearchBox = styled.div`
       animation: ripple 1000ms ease-out forwards;
     }
   }
+`;
+
+export const Response = styled.div`
+  width: 100%;
+  padding: 20px 5px;
+  margin-top: 30px;
+
+div{
+    display: flex;
+    flex-direction: column;  
+    
+  #chevron {
+    color: red;
+    display: flex;
+    align-Self: center;
+    margin: 10px;
+    
+  }
+
+  #categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #bcbcbc;
+    padding: 20px;
+    border-radius: 16px;
+    
+  }
+
+}
     #category-name {
-      font-size: 36px;
-      text-align: center;
-      margin: 120px 0 90px 0;
-      text-shadow: 1px 1px 15px rgba(0,0,0,0.75);
+      font-size: 24px;
+      text-shadow: 1px 1px 15px rgba(255,255,255,0.75);
+
       @media ${device.mobileL} {
-       font-size: 32px;
-       margin: 80px 0 80px 0;
+       font-size: 20px;
 
       }
 
       @media ${device.mobileM} {
-        font-size: 32px;
-        margin: 80px 0 80px 0;
+        font-size: 20px;
         
       }
       
       @media ${device.mobileS} {
-        font-size: 32px;
-        margin: 80px 0 80px 0;
+        font-size: 20px;
+        
       }
     }
     #category-id {
-      font-size: 70px;
+      font-size: 26px;
       text-align: center;
-      margin: 40px auto;
-      width: 100%;
-      padding: 10px;
+      
       border: none;
       border-radius: 55px;
       color: #fff;
+      text-shadow: 1px 1px 15px rgba(0,0,0,0.75);
+
 
       @media ${device.mobileL} {
-       font-size: 35px;
-       margin: 30px auto;
-
+       font-size: 20px;
+  
       }
 
       @media ${device.mobileM} {
-        font-size: 35px;
-        margin: 30px auto;
-        
+        font-size: 20px;
+       
       }
       
       @media ${device.mobileS} {
-        font-size: 35px;
-        margin: 30px auto;
-
+        font-size: 20px;
+        
       }
       
     }
+    
 `;
